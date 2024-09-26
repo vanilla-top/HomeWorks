@@ -1,16 +1,13 @@
-# This is a sample Python script.
+def coy(X, Y, P):
+    years = 0
+    while X < Y:
+        X = int(X * (1 + P / 100))
+        years += 1
+    return years
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+X = float(input("Введите начальный вклад (в рублях): "))
+Y = float(input("Введите целевую сумму (в рублях): "))
+P = float(input("Введите ежегодный процент увеличения (%): "))
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+years = coy(X, Y, P)
+print(f"'это займет {years} лет.чтобы депозит достиг {Y} рублей.")
